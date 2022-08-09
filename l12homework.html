@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perspective Homework</title>
+</head>
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container{
+			width: 500px;
+			background: #f4f4f4;
+		}
+
+		.div1{
+			width: 250px;
+			height: 100px;
+			background: linear-gradient(black,silver);
+			border: 1px solid rgba(0, 0, 0, 0.5);
+			box-shadow: -2px 0 10px black;
+			padding: 10px;
+
+			margin: auto;
+
+			perspective: 600px;
+
+			position: relative;
+		}
+
+		.div2{
+			width: 200px;
+			height: 100px;
+			background: linear-gradient(black,silver);
+			border: 1px solid rgba(0, 0, 0, 0.5);
+			box-shadow: -2px 1px 10px black;
+			padding: 50px;
+
+			transform: rotateX(45deg);
+
+			position: absolute;
+			top: -100%;
+			left: -5%;
+
+			z-index: 1;
+		}
+
+		/*.div5{
+			transform-origin: left;
+		}*/
+
+		
+		.div3{
+			width: 50px;
+			height: 100px;
+			background: #fff;
+			border: 1px solid black;
+			box-shadow: 1px 0 10px black;
+
+			position: absolute;
+			bottom: -1px;
+			left: 83px;
+
+			transform:skewY(0) rotateY(0);
+			transform-origin: left;
+			transition: all 0.2s;
+		}
+
+		.div3:hover{
+			transform: skewY(22deg) rotateY(45deg);
+			
+		}
+
+		.div4{
+			width: 50px;
+			height: 100px;
+			background: #fff;
+			border: 1px solid black;
+			box-shadow: -1px 0 10px rgba(0, 0, 0, 0.5);
+			/*padding: 10px;*/
+
+			position: absolute;
+			bottom: -1px;
+			right: 83px;
+
+			transform: skewY(-10deg) rotateY(45deg);
+			transform-origin: right;
+
+			transition: all 0.2s;
+
+			/*transform: rotateY(60deg);*/
+		}
+
+		.div4:hover{
+			transform: skewY(0) rotateY(0);
+		}
+	</style>
+<body>
+
+	<div class="container">
+
+
+		<div class="div1">div1
+			<div class="div2"></div>	
+			
+				<div class="div3">div3</div>
+				<div class="div4">div4</div>	
+			
+		</div>
+
+			
+
+
+	</div>
+
+</body>
+</html>
